@@ -1,12 +1,9 @@
 package com.main;
 
-import java.awt.List;
+import org.json.JSONArray;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.sql.dao.TestDao;
-import com.sql.domain.TestPo;
+import com.sql.dao.ParameterDao;
+import com.sql.domain.ParameterPo;
 import com.util.AppContextUtil;
 
 public class MainCalculation {
@@ -17,7 +14,9 @@ public static int beforSize=30;
 public static int behindSize=30;
 public static void main(String[] args) {
 
-	TestDao dao=AppContextUtil.getContext().getBean(TestDao.class);
+	ParameterDao dao=AppContextUtil.getContext().getBean(ParameterDao.class);
+	ParameterPo po=dao.findOne("test1");
+
 	System.err.println("ggaa");
 }
 
