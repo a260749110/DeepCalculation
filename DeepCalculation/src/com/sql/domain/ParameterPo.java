@@ -6,31 +6,30 @@ import javax.persistence.*;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
-
 /**
  * The persistent class for the parameter database table.
  * 
  */
 @Entity
-@Table(name="parameter")
+@Table(name = "parameter")
 @DynamicInsert
 @DynamicUpdate
 public class ParameterPo implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(unique=true, nullable=false, length=127)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(unique = true, nullable = false, length = 127)
 	private String name;
 
-	@Column(nullable=false)
+	@Column(nullable = false)
 	private double learning;
 
-	@Column(nullable=false)
+	@Column(nullable = false)
 	private double rate;
 
 	@Lob
-	@Column(nullable=false)
+	@Column(nullable = false)
 	private String values;
 
 	public ParameterPo() {

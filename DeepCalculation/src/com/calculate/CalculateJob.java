@@ -6,9 +6,9 @@ import java.util.List;
 import com.sql.dto.ParameterDto;
 
 public class CalculateJob {
-private ParameterDto base;
+	protected ParameterDto base;
 
-private List<ParameterDto> resultList;
+protected List<ParameterDto> resultList;
 public CalculateJob(ParameterDto dto)
 {
 	base=dto;
